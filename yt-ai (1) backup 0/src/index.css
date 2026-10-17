@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: var(--bg-base, #030712);
+  color: var(--text-primary, #f8fafc);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Glassmorphism Surface Classes adapting to Theme Tokens */
+.theme-surface {
+  background-color: var(--bg-surface);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+  backdrop-filter: blur(16px);
+}
+
+.theme-surface-elevated {
+  background-color: var(--bg-surface-elevated);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.theme-input {
+  background-color: var(--bg-base);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+}
+
+.theme-input:focus {
+  border-color: var(--border-focus);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent-glow);
+}
+
+/* Smooth transitions */
+* {
+  border-color: var(--border-subtle);
+}
